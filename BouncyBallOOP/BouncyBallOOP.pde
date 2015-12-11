@@ -4,9 +4,9 @@ Ball d;
 
 void setup() {
   size(800, 600);
-  b = new Ball();      //initialize b as a new object of the Ball class
-  c = new Ball();
-  d = new Ball();
+  b = new Ball(height/2, width/2);      //initialize b as a new object of the Ball class
+  c = new Ball(200);
+  d = new Ball(300);
 }
 
 void draw() {
