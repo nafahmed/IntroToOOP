@@ -17,10 +17,27 @@ class Ball {
     fill(c);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
-   
   }
-  void move(){
+  void move() {
     loc.add(vel);
   }
-  
+  void run() {
+    display();
+    move();
+  }
+
+  void bounce() {
+    if (loc.x>=width) {
+      vel.x = -vel.x;
+    }
+    if (loc.x<=0) {
+      vel.x = -vel.x;
+    }
+    if (loc.y>=height) {
+      vel.y = -vel.y;
+    }
+    if (loc.y<=0) {
+      vel.y = -vel.y;
+    }
+  }
 }
